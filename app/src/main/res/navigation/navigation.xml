@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/biomarkersListFragment">
+
+    <fragment
+        android:id="@+id/biomarkersListFragment"
+        android:name="com.irsc.challenge.fragments.BiomarkersListFragment"
+        tools:layout="@layout/fragment_biomarkers_list"
+        android:label="Reports" >
+        <action
+            android:id="@+id/action_biomarkersListFragment_to_biomarkDetailsFragment"
+            app:destination="@id/biomarkDetailsFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/biomarkDetailsFragment"
+        tools:layout="@layout/fragment_biomark_details"
+        android:name="com.irsc.challenge.fragments.BiomarkerDetailsFragment"
+        android:label="Biomarker Details" />
+
+    <dialog
+        tools:layout="@layout/fragment_progress_dialog"
+        android:id="@+id/progressDialogFragment"
+        android:name="com.irsc.challenge.fragments.ProgressDialogFragment"
+        android:label="ProgressDialogFragment" />
+    <dialog
+        tools:layout="@layout/fragment_message_dialog"
+        android:id="@+id/messageDialogFragment"
+        android:name="com.irsc.challenge.fragments.MessageDialogFragment"
+        android:label="MessageDialogFragment" />
+</navigation>

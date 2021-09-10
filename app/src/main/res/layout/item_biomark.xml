@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="mark"
+            type="com.irsc.challenge.models.MarkModel" />
+    </data>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.irsc.challenge.views.BlobView
+            android:id="@+id/blob"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            app:blob_color="@{mark.color}"
+            app:blob_text="@{mark.symbol}"
+            />
+
+        <LinearLayout
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={mark.date}"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={mark.value}"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_arrow_right_24"/>
+
+
+    </LinearLayout>
+</layout>
