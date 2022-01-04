@@ -23,6 +23,7 @@ ext{
     compiler_version = '3.0.0-beta6'
     navigationVersion = "2.3.0"
     hiltVersion = "2.38.1"
+    room_version = "2.3.0"
 
 }
 
